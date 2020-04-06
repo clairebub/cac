@@ -4,6 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
+import {Box} from '@material-ui/core'
 //import CardActionArea from '@material-ui/core/CardActionArea';
 //import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -28,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
 }));
+
+const heroCardStyles = {
+  color: 'auto',
+  height: '200',
+};
 
 const sections = [
 
@@ -90,7 +96,15 @@ export default function App() {
       <Container maxWidth="lg">
         <Header title="CAC 华人社团" sections={sections} />
         <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
+          <Grid
+            container
+            spacing={4}
+            direction="column"
+            alignItems="center"
+            justify="center"
+            >
+            <img src="/images/transverse_2.png" alt="donation" width="800" />
+          </Grid>
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
