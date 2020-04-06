@@ -30,45 +30,48 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: 'Culture', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
+
 ];
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: '',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    "",
   image: '/images/transverse_2.png',
   imgText: 'main image description',
-  linkText: 'Continue reading…',
+  linkText: '',
 };
 
 const featuredPosts = [
   {
-    title: 'Featured post',
-    date: 'Nov 12',
+    title: 'Post title 1',
+    date: 'April 5th',
     description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      'Say something about this photo.',
     image: '/images/transverse_1.jpeg',
     imageText: 'Image Text',
   },
   {
-    title: 'Post title',
-    date: 'Nov 11',
+    title: 'Post title 2',
+    date: 'April 5th',
     description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      'Say something about this photo.',
     image: '/images/transverse_3.png',
     imageText: 'Image Text',
   },
 ];
 
-const posts = [post1, post2, post3];
+const posts = [];
 
 const sidebar = {
   title: 'About',
   description:
-    'Say something to introduce your organization.',
+    'Founded during the Covid-19 Pandemic crisis, CAC Hand-in-Hand(Chinese\
+      American Community Hand-In-Hand) is a non-profit public interest community\
+      organization which is dedicated to safe guard our frontline health care\
+      professionals. The CAC’s mission is to call upon every Chinese American and\
+      the general public residing in USA to get united, and support our front line\
+      health care professionals to survive this unprecedented crisis.',
   archives: [
   ],
   social: [
@@ -94,7 +97,7 @@ export default function App() {
             ))}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="From the firehose" posts={posts} />
+            <Main title="Latest" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
@@ -104,7 +107,7 @@ export default function App() {
           </Grid>
         </main>
       </Container>
-      <Footer title="CAC 华人社团" description="Something here to give the footer a purpose!" />
+      <Footer title="" description="" />
     </React.Fragment>
   );
 }
